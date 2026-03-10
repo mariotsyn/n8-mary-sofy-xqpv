@@ -1,0 +1,34 @@
+---
+interface Props { businessName: string; copyright?: string; phone?: string; email?: string; address?: string; }
+const { businessName, copyright, phone, email, address } = Astro.props;
+---
+<footer style="padding:3rem 1.5rem 2rem;border-top:1px solid var(--color-border);background:rgba(0,0,0,0.3);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr;gap:2rem;margin-bottom:2rem;" class="footer-grid">
+      <div>
+        <p style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.3rem;margin-bottom:0.8rem;">{businessName}</p>
+        {address && <p style="color:var(--color-text-muted);font-size:0.85rem;line-height:1.7;">{address}</p>}
+      </div>
+      <div>
+        <p style="font-weight:600;margin-bottom:0.8rem;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--color-text-muted);">Enlaces</p>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;">
+          <a href="#about" style="color:var(--color-text-muted);text-decoration:none;font-size:0.9rem;transition:color 0.3s;">Nosotros</a>
+          <a href="#services" style="color:var(--color-text-muted);text-decoration:none;font-size:0.9rem;transition:color 0.3s;">Servicios</a>
+          <a href="#contact" style="color:var(--color-text-muted);text-decoration:none;font-size:0.9rem;transition:color 0.3s;">Contacto</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-weight:600;margin-bottom:0.8rem;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--color-text-muted);">Contacto</p>
+        {phone && <p style="color:var(--color-text-muted);font-size:0.9rem;margin-bottom:0.3rem;">📞 {phone}</p>}
+        {email && <p style="color:var(--color-text-muted);font-size:0.9rem;">📧 {email}</p>}
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--color-border);padding-top:1.5rem;text-align:center;">
+      <p style="color:var(--color-text-muted);font-size:0.8rem;">{copyright || `© ${new Date().getFullYear()} ${businessName}. Todos los derechos reservados.`}</p>
+    </div>
+  </div>
+</footer>
+<style>
+  @media(min-width:768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr !important; } }
+  footer a:hover { color: white !important; }
+</style>
