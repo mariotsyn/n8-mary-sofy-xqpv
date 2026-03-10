@@ -1,0 +1,33 @@
+---
+interface Service { icon: string; title: string; description: string; }
+interface Props { services: Service[]; title?: string; subtitle?: string; }
+const { services, title = 'Nuestros Servicios', subtitle = 'Lo que ofrecemos' } = Astro.props;
+---
+<section id="services" style="background:var(--color-bg);">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:4rem;">
+      <span style="display:inline-block;padding:6px 16px;border-radius:50px;background:color-mix(in srgb, var(--color-primary) 15%, transparent);color:var(--color-primary);font-size:0.8rem;font-weight:600;margin-bottom:1rem;text-transform:uppercase;letter-spacing:1px;">
+        {subtitle}
+      </span>
+      <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:800;letter-spacing:-1px;">
+        {title}
+      </h2>
+    </div>
+    
+    <div style={`display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;${services.length === 4 ? 'grid-template-columns:repeat(2,1fr);' : ''}`}>
+      {services.map((service, i) => (
+        <div class="bento-card reveal" data-stagger style={`transition-delay:${i * 0.1}s;`}>
+          <div style="font-size:2.5rem;margin-bottom:1rem;width:60px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:16px;background:color-mix(in srgb, var(--color-primary) 12%, transparent);">
+            {service.icon}
+          </div>
+          <h3 style="font-family:'Outfit',sans-serif;font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;letter-spacing:-0.3px;">
+            {service.title}
+          </h3>
+          <p style="color:var(--color-text-muted);line-height:1.7;font-size:0.95rem;">
+            {service.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
