@@ -1,0 +1,36 @@
+---
+interface Testimonial { name: string; stars: number; text: string; }
+interface Props { testimonials: Testimonial[]; title?: string; }
+const { testimonials, title = 'Lo que dicen nuestros clientes' } = Astro.props;
+---
+<section style="background:var(--color-bg);">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:4rem;">
+      <span style="display:inline-block;padding:6px 16px;border-radius:50px;background:color-mix(in srgb, var(--color-primary) 15%, transparent);color:var(--color-primary);font-size:0.8rem;font-weight:600;margin-bottom:1rem;text-transform:uppercase;letter-spacing:1px;">
+        Testimonios
+      </span>
+      <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:800;letter-spacing:-1px;">
+        {title}
+      </h2>
+    </div>
+    
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:1.5rem;">
+      {testimonials.map((t, i) => (
+        <div class="glass reveal" data-stagger style={`padding:2rem;border-radius:20px;transition-delay:${i * 0.1}s;`}>
+          <div class="stars" style="font-size:1rem;margin-bottom:1rem;">
+            {'★'.repeat(t.stars)}{'☆'.repeat(5 - t.stars)}
+          </div>
+          <p style="color:var(--color-text-muted);line-height:1.7;font-size:0.95rem;font-style:italic;margin-bottom:1.5rem;">
+            "{t.text}"
+          </p>
+          <div style="display:flex;align-items:center;gap:0.8rem;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg, var(--color-primary), var(--color-accent));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;">
+              {t.name.charAt(0)}
+            </div>
+            <span style="font-weight:600;font-size:0.95rem;">{t.name}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
