@@ -1,0 +1,57 @@
+{
+  "business": {
+    "name": "Mary&Sofy",
+    "tagline": "Tu Transformación de Belleza Empieza Aquí.",
+    "description": "Mary&Sofy es tu santuario de belleza en Dénia, donde la pasión por el estilo y la perfección se une para ofrecerte una experiencia inolvidable. Nuestro equipo de expertas estilistas y esteticistas te brindará un trato personalizado y las últimas tendencias para realzar tu belleza natural. Descubre un espacio de relajación y transformación diseñado para ti.",
+    "phone": "+34 722 25 30 41",
+    "address": "Pg. del Saladar, 114, A, 03700 Dénia, Alicante, España",
+    "email": "info@marysofy.es",
+    "rating": 5,
+    "reviewCount": 116,
+    "hours": ["Monday: 10:00 AM – 8:00 PM","Tuesday: 10:00 AM – 8:00 PM","Wednesday: 10:00 AM – 8:00 PM","Thursday: 10:00 AM – 8:00 PM","Friday: 10:00 AM – 8:00 PM","Saturday: 10:00 AM – 3:00 PM","Sunday: Closed"]
+  },
+  "theme": {
+    "primary": "#B1A296",
+    "secondary": "#3B3335",
+    "accent": "#E0BBE4",
+    "mode": "dark"
+  },
+  "hero": {
+    "headline": "Mary&Sofy: Donde tu Belleza Alcanza su Máximo Esplendor.",
+    "subheadline": "Transforma tu imagen con nuestros servicios de peluquería y estética de élite. Expertos en realzar tu estilo y bienestar en Dénia.",
+    "cta1": { "text": "Pedir Cita Ahora", "href": "#contact" },
+    "cta2": { "text": "Ver Nuestros Servicios", "href": "#services" },
+    "imageUrl": "https://places.googleapis.com/v1/places/ChIJZ93D5IwbnhIR_UAX4rsMKpM/photos/ATCDNfVMmXGYcSpCTzBD6QYFb-sEpyGo_ccb4WzDY7PpA63w4Gfn1BeYG0EggPUp3GhqYpBN0ALeYUwlZXD6THczg0ODv-2u-achj87wrd929kOvfW1BaR8g58s4l3YOv78gCMDhpJFdjEClTYHI0xgcJpZN5n4XUSKscmpY68K3FYTaBtibjbhlh8hZJIyrv-zIBJcg_c-V5q2xgb8rkytdIoIIccb9of_MMpSErfXBQ0_ymfEEqCI7JeQ3ijKHtuVJaWI8E26nRZGhrxi9QIR7jX2x1eu7vWvwlKebSDWZxwfMfw/media?maxWidthPx=1200&key=AIzaSyAVvBWUrtTMnut45RF61wSg1Ebd8"
+  },
+  "services": [
+    { "icon": "💇‍♀️", "title": "Peluquería Integral", "description": "Desde cortes modernos y peinados elegantes hasta tratamientos capilares de vanguardia. Te asesoramos para encontrar el estilo perfecto que resalte tu personalidad." },
+    { "icon": "💅", "title": "Manicura y Pedicura Premium", "description": "Disfruta de uñas impecables con nuestros servicios de manicura y pedicura, usando productos de alta calidad. Cuidado experto para unas manos y pies perfectos." },
+    { "icon": "💆‍♀️", "title": "Tratamientos Faciales Personalizados", "description": "Revitaliza tu piel con nuestros tratamientos faciales adaptados a tus necesidades. Piel radiante y luminosa garantizada." },
+    { "icon": "✨", "title": "Maquillaje Profesional", "description": "Para eventos especiales o un toque diario, nuestro equipo de maquilladores profesionales realzará tu belleza. Brilla con un look hecho a medida." }
+  ],
+  "about": {
+    "title": "Nuestra Pasión por tu Belleza",
+    "text": "En Mary&Sofy, creemos que la belleza es una expresión de bienestar y confianza. Desde nuestros inicios en Dénia, nos hemos dedicado a crear un espacio donde cada cliente se siente único y valorado, ofreciendo servicios de peluquería y estética que van más allá de lo superficial.\n\nNuestro equipo está compuesto por profesionales altamente cualificados, apasionados por las últimas tendencias y técnicas en el sector de la belleza. Utilizamos solo productos de la más alta calidad y nos formamos continuamente para garantizar resultados excepcionales que superen tus expectativas.\n\nUbicados convenientemente en Pg. del Saladar, 114, A, Dénia, somos tu salón de confianza para desconectar y transformarte. Ven y descubre por qué nuestra clientela nos valora con 5 estrellas en Google.",
+    "imageUrl": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80"
+  },
+  "gallery": [
+    { "url": "https://places.googleapis.com/v1/places/ChIJZ93D5IwbnhIR_UAX4rsMKpM/photos/ATCDNfVMmXGYcSpCTzBD6QYFb-sEpyGo_ccb4WzDY7PpA63w4Gfn1BeYG0EggPUp3GhqYpBN0ALeYUwlZXD6THczg0ODv-2u-achj87wrd929kOvfW1BaR8g58s4l3YOv78gCMDhpJFdjEClTYHI0xgcJpZN5n4XUSKscmpY68K3FYTaBtibjbhlh8hZJIyrv-zIBJcg_c-V5q2xgb8rkytdIoIIccb9of_MMpSErfXBQ0_ymfEEqCI7JeQ3ijKHtuVJaWI8E26nRZGhrxi9QIR7jX2x1eu7vWvwlKebSDWZxwfMfw/media?maxWidthPx=1200&key=AIzaSyAVvBWUrtTMnut45RF61wSg1Ebd8", "alt": "Interior moderno y acogedor de Mary&Sofy en Dénia." },
+    { "url": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80", "alt": "Manicura profesional con esmalte semipermanente y cuidado de uñas." },
+    { "url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80", "alt": "Tratamiento facial relajante en un ambiente de spa." }
+  ],
+  "testimonials": [
+    { "name": "Sofía García", "stars": 5, "text": "Siempre salgo encantada de Mary&Sofy. El corte de pelo es perfecto y el trato es inmejorable. ¡Mi peluquería de confianza!" },
+    { "name": "Laura Pérez", "stars": 5, "text": "Me hice un balayage y quedó espectacular. El equipo es súper profesional y el ambiente muy agradable. ¡Recomendadísimo!" },
+    { "name": "Marta Ruíz", "stars": 4, "text": "Muy buen servicio de manicura, rápido y con un resultado duradero. Solo le pongo 4 estrellas por la dificultad para aparcar a veces." }
+  ],
+  "contact": {
+    "title": "Agenda tu Momento de Belleza Hoy",
+    "subtitle": "Contáctanos para una experiencia personalizada y resultados espectaculares. ¡Te esperamos!",
+    "whatsappNumber": "+34 722 25 30 41",
+    "showMap": true,
+    "mapQuery": "Mary&Sofy Pg. del Saladar, 114, A, 03700 Dénia, Alicante, España"
+  },
+  "footer": {
+    "copyright": "© 2026 Mary&Sofy"
+  }
+}
