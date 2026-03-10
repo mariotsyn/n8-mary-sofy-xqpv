@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import SocialProof from '../components/SocialProof.astro';
+import Services from '../components/Services.astro';
+import About from '../components/About.astro';
+import Gallery from '../components/Gallery.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import siteData from '../data/site-data.json';
+
+const d = siteData;
+---
+<style is:global>
+  :root {
+    --color-primary: {d.theme?.primary || "#6366f1"};
+    --color-secondary: {d.theme?.secondary || "#1e1b4b"};
+    --color-accent: {d.theme?.accent || "#f59e0b"};
+  }
+</style>
+<Layout title={d.business.name} description={d.hero.subheadline}>
+  <Navbar businessName={d.business.name} />
+  <Hero
+    headline={d.hero.headline}
+    subheadline={d.hero.subheadline}
+    cta1={d.hero.cta1}
+    cta2={d.hero.cta2}
+    imageUrl={d.hero.imageUrl}
+    rating={d.business.rating}
+    reviewCount={d.business.reviewCount}
+  />
+  {d.business.rating && (
+    <SocialProof rating={d.business.rating} reviewCount={d.business.reviewCount || 50} businessName={d.business.name} />
+  )}
+  <Services services={d.services} />
+  {d.about && (
+    <About title={d.about.title} text={d.about.text} imageUrl={d.about.imageUrl} />
+  )}
+  {d.gallery && d.gallery.length > 0 && (
+    <Gallery gallery={d.gallery} />
+  )}
+  {d.testimonials && d.testimonials.length > 0 && (
+    <Testimonials testimonials={d.testimonials} />
+  )}
+  <Contact
+    title={d.contact.title}
+    subtitle={d.contact.subtitle}
+    phone={d.business.phone}
+    email={d.business.email}
+    address={d.business.address}
+    whatsappNumber={d.contact.whatsappNumber}
+    hours={d.business.hours}
+    mapQuery={d.contact.mapQuery}
+  />
+  <Footer
+    businessName={d.business.name}
+    copyright={d.footer?.copyright}
+    phone={d.business.phone}
+    email={d.business.email}
+    address={d.business.address}
+  />
+</Layout>
