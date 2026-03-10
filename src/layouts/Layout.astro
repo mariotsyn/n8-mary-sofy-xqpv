@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+interface Props { title: string; description?: string; }
+const { title, description = '' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title}</title>
+</head>
+<body>
+  <slot />
+  <script>
+    // Intersection Observer for reveal animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Stagger children
+          const children = entry.target.querySelectorAll('[data-stagger]');
+          children.forEach((child, i) => {
+            (child as HTMLElement).style.transitionDelay = `${i * 0.1}s`;
+            child.classList.add('visible');
+          });
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    
+    // Navbar scroll effect
+    const nav = document.getElementById('navbar');
+    if (nav) {
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+      });
+    }
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+        menuBtn.classList.toggle('active');
+      });
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          menuBtn.classList.remove('active');
+        });
+      });
+    }
+  </script>
+</body>
+</html>
